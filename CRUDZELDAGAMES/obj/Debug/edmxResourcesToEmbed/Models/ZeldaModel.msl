@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NINTENDOGAMEModelStoreContainer" CdmEntityContainer="NINTENDOGAMEEntities">
+    <EntitySetMapping Name="ZELDAGAMES">
+      <EntityTypeMapping TypeName="NINTENDOGAMEModel.ZELDAGAMES">
+        <MappingFragment StoreEntitySet="ZELDAGAMES">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Año" ColumnName="Año" />
+          <ScalarProperty Name="Consola" ColumnName="Consola" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_AddZeldaGame" FunctionName="NINTENDOGAMEModel.Store.SP_AddZeldaGame" />
+    <FunctionImportMapping FunctionImportName="SP_GetZeldaGames" FunctionName="NINTENDOGAMEModel.Store.SP_GetZeldaGames">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NINTENDOGAMEModel.SP_GetZeldaGames_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Año" ColumnName="Año" />
+          <ScalarProperty Name="Consola" ColumnName="Consola" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_UpdZeldaGame" FunctionName="NINTENDOGAMEModel.Store.SP_UpdZeldaGame" />
+  </EntityContainerMapping>
+</Mapping>

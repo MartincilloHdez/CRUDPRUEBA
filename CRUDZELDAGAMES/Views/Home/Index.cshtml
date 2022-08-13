@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "Zelda";
+}
+
+<head>
+    <link href="~/Scripts/CSS/Index.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/e55883cfb1.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <h3 class="text-center">Zelda Games</h3>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="mt-5 col-sm-9 col-md-9 col-lg-9">
+                    <table class="table " style="width:100%" id="tbZelda">
+                        <thead class="bg-mgreen">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Año</th>
+                                <th colspan="2">Consola</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbCuerpo">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <div class="col-sm-12 col-md-12 col-lg-12 border-gray">
+                        <h4 class="text-center text-bold">Agregar Juego</h4>
+                        <form class="form-horizontal">
+                            <div class="form-group row">
+                                <label class="color-black col-sm-2 col-md-4 col-lg-2 control-label">Nombre</label>
+                                <div class="col-sm-10 col-md-8 col-lg-10">
+                                    <input type="text" class="form-control" placeholder="Ingrese el nombre del juego" id="txtAddName" />
+                                </div>
+
+                            </div>
+                            <div class="form-group row">
+                                <label class="color-black col-sm-2 col-md-4 col-lg-2 control-label">Año</label>
+                                <div class="col-sm-10 col-md-8 col-lg-10">
+                                    <input type="number" class="form-control" placeholder="Ingrese el año del juego" id="txtAddYear" />
+                                </div>
+
+                            </div>
+                            <div class="form-groug row">
+                                <label class="color-black col-sm-2 col-md-4 col-lg-2 control-label">Consola</label>
+                                <div class="col-sm-10 col-md-8 col-lg-10">
+                                    <input type="text" class="form-control" placeholder="Ingrese la Consola" id="txtAddConsole" />
+                                </div>
+
+                            </div>
+                        </form>
+
+                        <div class="text-center">
+                            <button class="btn text-white btn-primary mt-5 mb-5 mr-2" id="btnAddjuego"><i class="fa-solid fa-gamepad"></i> Agregar Juego</button>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-12 col-lg-12 border-gray mt-5" id="divUpdate">
+                        <h4 class="text-center text-bold">Actualizar Juego</h4>
+                        <form class="form-horizontal">
+                            <div class="form-group row">
+                                <label class="color-black col-sm-2 col-md-4 col-lg-2 control-label">Nombre</label>
+                                <div class="col-sm-10 col-md-8 col-lg-10">
+                                    <input type="text" class="form-control" placeholder="Ingrese el nombre del juego" id="txtUpdName" />
+                                </div>
+                                
+                            </div>
+                            <div class="form-group row">
+                                <label class="color-black col-sm-2 col-md-4 col-lg-2 control-label">Año</label>
+                                <div class="col-sm-10 col-md-8 col-lg-10">
+                                    <input type="number" class="form-control" placeholder="Ingrese el año del juego" id="txtUpdYear" />
+                                </div>
+                                
+                            </div>
+                            <div class="form-groug row">
+                                <label class="color-black col-sm-2 col-md-4 col-lg-2 control-label">Consola</label>
+                                <div class="col-sm-10 col-md-8 col-lg-10">
+                                    <input type="text" class="form-control" placeholder="Ingrese la Consola" id="txtUpdConsole" />
+                                </div>
+                                
+                            </div>
+                        </form>
+                        
+                        <div class="text-center">
+                            <button class="btn text-white btn-dark mt-5 mb-5 mr-2" id="btnUpdjuego"><i class="fa-solid fa-bomb"></i> Actualizar Juego</button>
+                            <button class="btn text-white btn-warning mt-5 mb-5 mr-2" id="btncancel"><i class="fa-solid fa-ban"></i> Cancelar</button>
+                        </div>
+                    </div>
+                    <input type="text" id="txtId" class="hidden"/>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="~/Scripts/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script src="~/Scripts/Javascript/Index.js" type="text/javascript"></script>

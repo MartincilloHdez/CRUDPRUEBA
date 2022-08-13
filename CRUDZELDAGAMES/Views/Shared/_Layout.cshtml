@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>MLH</title>
+    <link href="~/Scripts/CSS/Index.css" rel="stylesheet" type="text/css" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="bg-mblue">
+    <div class="m-5 border-black bg-smoke">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p class="m-5 text-bold">&copy; @DateTime.Now.Year - Desarrollador por Ing. Martin Laguna Hernandez</p>
+        </footer>
+    </div>
+    
+  
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
